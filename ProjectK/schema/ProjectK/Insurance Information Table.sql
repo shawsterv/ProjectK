@@ -1,0 +1,20 @@
+CREATE TABLE [dbo].[Insurance Information] (
+    [insurance_Id]               INT      NOT NULL PRIMARY KEY CLUSTERED ([insurance_Id] ASC),
+    [FK_vehicle_id]              INT      NULL,
+    [updated_date]               DATETIME NULL,
+    [policy_number]              INT      NULL,
+    [expiration_date]            INT      NULL,
+    [effective_date]             INT      NULL,
+    [insurance_company]          INT      NULL,
+    [agency_name]                INT      NULL,
+    [primary_agent_contact_name] INT      NULL,
+    [agency_phone_number]        INT      NULL,
+    [insurance_cost]             INT      NULL,
+    [liability_limits]           INT      NULL,
+    [comp_deductable]            INT      NULL,
+    [collision_deductable]       INT      NULL,
+    [rental_reimbursement]       INT      NULL,
+    [primary_driver]             INT      NULL,
+    [proof_of_insurance]         INT      NULL,
+    CONSTRAINT [FK_vehicle_id] FOREIGN KEY ([FK_vehicle_id]) REFERENCES [dbo].[Vehicle Table] ([vehicle_id])
+);
